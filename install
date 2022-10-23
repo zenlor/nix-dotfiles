@@ -1,0 +1,23 @@
+#!/bin/sh
+
+print_usage() {
+    cat <<-EOF
+Options:
+    build  :: builds the flake in ./results
+    switch :: install the flake in ~/.config
+EOF
+    exit "$1"
+}
+
+case "$1" in
+    build)
+        nix run . build -- --flake . --show-trace
+    ;;
+
+    switch)
+        nix run . switch -- --flake .
+    ;;
+    *)
+        print_usage 0
+    ;;
+esac
