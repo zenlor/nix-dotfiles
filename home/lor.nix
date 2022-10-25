@@ -9,6 +9,9 @@
     homeDirectory = "/home/lor";
   };
 
+
+  home.sessionPath = ["$HOME/lib/bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin"];
+
   programs.keychain = {
     agents = [ "ssh" ];
     keys = [ "id_rsa"
