@@ -9,8 +9,11 @@
     prefix = "C-a";
     secureSocket = true;
     terminal = "screen-256color";
+    customPaneNavigationAndResize = true;
 
     extraConfig = ''
+      bind-key a last-window
+
       set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
       set -s escape-time 0
 
