@@ -18,6 +18,7 @@
   ];
 
   home.packages = with pkgs; [
+    ripgrep  # filtered faster grep
     fd       # modern find
     bat      # modern cat
     exa      # modern ls
