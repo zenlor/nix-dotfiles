@@ -12,6 +12,8 @@
     LANG = "en_US.UTF-8"; # for whatever reason osx doesn't set it
   };
 
+  home.sessionPath = ["/usr/local/bin" "$HOME/lib/bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin"];
+
   home.packages = with pkgs; [
     awscli2  # the worst official aws cli
     tfswitch # manage multiple versions of terraform
