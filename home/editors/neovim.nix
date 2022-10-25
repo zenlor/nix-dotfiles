@@ -37,22 +37,9 @@
 
       terminus
 
-      {
-        plugin = bufferline-nvim;
-        type = "lua";
-        config = ''
-
-          require("bufferline").setup{ }
-          nmap("<leader>b", ":BufferLineCycleNext<cr>")
-          nmap("<leader>B", ":BufferLineCyclePrev<cr>")
-        '';
-      }
+      bufferline-nvim
     ];
 
-    extraConfig = ''
-    lua <<-EOF
-      ${builtins.readFile ./neovim.lua}
-    EOF
-    '';
+    extraConfig = builtins.readFile ./neovim.vim;
   };
 }
