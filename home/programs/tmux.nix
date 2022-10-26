@@ -29,6 +29,8 @@
       bind S set synchronize-panes
 
       # UI
+      set -g set-titles on
+
       set -g status-left-length 32
       set -g status-right-length 150
 
