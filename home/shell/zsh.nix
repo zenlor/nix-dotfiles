@@ -11,7 +11,7 @@
 
     autocd = true;
     enableVteIntegration = true;
-    enableAutosuggestions = true;
+    enableAutosuggestions = false;
     enableCompletion = true;
     historySubstringSearch.enable = true;
     history.share = true;
