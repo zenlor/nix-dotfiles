@@ -68,7 +68,7 @@
         zle -N down-line-or-beginning-search
         bindkey "''${terminfo[kcud1]}" down-line-or-beginning-search
       fi
-      bindkey '^[[127;5u' backward-kill-word                  # [Ctrl-Backspace] - delete whole backward-word
+      bindkey '^[[127;5u' backward-kill-word                  # [Ctrl-Backspace] - delete whole backward-wordf3
       bindkey '^[[127;2u' backward-kill-word                  # [Shift-Backspace] - delete whole backward-word
       bindkey '^[[127;4u' backward-kill-line                  # [Shift-Alt-Backspace] - delete line up to cursor
       bindkey '^[[3;5~' kill-word                             # [Ctrl-Delete] - delete whole forward-word
@@ -87,6 +87,15 @@
     };
 
     plugins = with pkgs; [
+      {
+        name = "sfz.prompt.zsh";
+        src = fetchFromGitHub {
+          owner  = "zenlor";
+          repo   = "sfz-prompt.zsh";
+          rev    = "f3ff3f6";
+          sha256 = "sha256-mArZp+2tHvSsVZXpFWSSah5X3mvNTebKvcox6tQ2nkQ=";
+        };
+      }
       {
         name = "F-Sy-H";
         src = fetchFromGitHub {

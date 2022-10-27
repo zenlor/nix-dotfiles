@@ -6,7 +6,6 @@
 {
   imports = [
     ./shell/zsh.nix
-    ./shell/starship.nix
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/fzf.nix
