@@ -88,12 +88,12 @@
 
     plugins = with pkgs; [
       {
-        name = "sfz.prompt.zsh";
+        name = "sfz-prompt";
         src = fetchFromGitHub {
           owner  = "zenlor";
           repo   = "sfz-prompt.zsh";
-          rev    = "f3ff3f6";
-          sha256 = "sha256-mArZp+2tHvSsVZXpFWSSah5X3mvNTebKvcox6tQ2nkQ=";
+          rev    = "3089454";
+          sha256 = "sha256-yoImXt2FAOMRCJ5Y2uzpUDAWCNAxaiaHj3owsRin7XE=";
         };
       }
       {
