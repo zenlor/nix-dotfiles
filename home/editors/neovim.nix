@@ -27,6 +27,7 @@
         ]
       ))
 
+      vim-sensible
       vim-lastplace
       vim-vinegar
       vim-repeat
