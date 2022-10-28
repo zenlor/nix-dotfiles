@@ -50,6 +50,9 @@
 
       autopair-init
 
+      # case insensitive matching for lower-case letters
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
       e()     { pgrep emacs && emacsclient -n "$@" || emacs -nw "$@" }
       ediff() { emacs -nw --eval "(ediff-files \"$1\" \"$2\")"; }
       eman()  { emacs -nw --eval "(switch-to-buffer (man \"$1\"))"; }
