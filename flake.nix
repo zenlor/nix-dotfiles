@@ -44,18 +44,33 @@
       };
 
       darwinConfigurations = {
-        "MWB-C02XL3VCJGH5" = {
+        "MWB-C02XL3VCJGH5" = darwin.lib.darwinSystem {
           pkgs = defaultPackage.x86_64-darwin;
 
           modules = [
             ./darwin/mwb.nix
           ];
         };
+        "lg-mwb" = darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          modules = [ ./darwin/mwb.nix ];
+        };
       };
 
       homeConfigurations = {
-        "lgiuliani" = home-manager.lib.homeManagerConfiguration {
+        "lgiuliani@MWB-C02XL3VCJGH5" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+
+          extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
+
+          modules = [
+            ./home/default.nix
+            ./home/lgiuliani.nix
+          ];
+        };
+
+        "lgiuliani" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
           extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
 
@@ -76,5 +91,5 @@
         };
       };
     }
-  ;
-}
+    ;
+  }

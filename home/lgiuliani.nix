@@ -13,8 +13,11 @@
   };
 
   home.sessionPath = [
+    "/opt/homebrew/bin"
+    "/opt/homebrew/sbin"
     "/usr/local/bin"
     "$HOME/lib/bin"
+    "$HOME/bin"
     "$HOME/.local/bin"
     "$HOME/.emacs.d/bin"
     "$HOME/.cargo/bin"
