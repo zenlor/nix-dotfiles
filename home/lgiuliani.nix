@@ -13,14 +13,15 @@
   };
 
   home.sessionPath = [
-    "/opt/homebrew/bin"
-    "/opt/homebrew/sbin"
-    "/usr/local/bin"
-    "$HOME/lib/bin"
-    "$HOME/bin"
-    "$HOME/.local/bin"
-    "$HOME/.emacs.d/bin"
-    "$HOME/.cargo/bin"
+    "/opt/homebrew/bin"  # homebrew handled by darwin-nix
+    "/opt/homebrew/sbin" # ^
+    "/usr/local/bin"     # this should be default
+    "$HOME/lib/bin"      # the go $PATH
+    "$HOME/bin"          # maybe useful
+    "$HOME/.local/bin"   # Locally installed ... like janet-dev
+    "$HOME/.emacs.d/bin" # Doom
+    "$HOME/.cargo/bin"   # Cargo/Rust
+    "$HOME/.rd/bin"      # RancherDesktop
   ];
 
   home.packages = with pkgs; [
