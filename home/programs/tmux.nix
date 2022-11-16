@@ -2,7 +2,6 @@
   programs.tmux = {
     enable = true;
     aggressiveResize = true;
-    baseIndex = 1;
     clock24 = true;
     historyLimit = 5000;
     keyMode = "vi";
@@ -13,6 +12,12 @@
 
     extraConfig = ''
       bind-key a last-window
+
+      # start pane number from 1
+      set -g base-index 1
+      setw -g pane-base-index 1
+      # automagically renumber windows
+      set -g renumber-windows on
 
       set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
       set -s escape-time 0
