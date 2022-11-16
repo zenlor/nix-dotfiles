@@ -30,6 +30,7 @@
     k9s      # nicer kubectl
     ktunnel  # tunnel k8s services to/from your 127.0.0.1
     terranix # write derivations not hcl
+    babashka # fast clojure
   ];
 
   programs.git = {
@@ -37,7 +38,7 @@
     userEmail = "lgiuliani@malwarebytes.com";
 
     signing = {
-      key = "key::ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBABLDbeczvNJj/1gQ6M7AYghHTr9pm58t4bGYK9I4aU8EQsFuuO+e2sTo08Vg7cnebPEu3hCzrdzbTs+r/GJmfaT3AC86h1KKG9Gpz60aC3LTNb6R3Bn5qMemryjcbGQsxv+tydS6+38z3I3aT7V3jWAzghk3yShVEW6OucCE9hhZlnw4A== lgiuliani@malwarebytes.com";
+      key = "key::${(builtins.readFile ./lgiuliani.pub)}";
     };
   };
 
@@ -54,5 +55,11 @@
   };
 
   programs.ssh = {
+  };
+
+  home.file = {
+    ".ssh/allowed-signers" = {
+      text = (builtins.readFile ./lgiuliani.pub);
+    };
   };
 }

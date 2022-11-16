@@ -21,10 +21,6 @@
       st = "status";
     };
 
-    signing = {
-      signByDefault = true;
-    };
-
     extraConfig = {
       core.autocrlf = "input";
       init.defaultBranch = "main";
@@ -32,7 +28,9 @@
       rebase.autosquash = true;
       rerere.enabled = true;
 
+      commit.gpgsign = true;
       gpg.format = "ssh";
+      gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
     };
   };
 

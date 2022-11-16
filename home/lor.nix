@@ -1,7 +1,6 @@
 { inputs, lib, config, pkgs, ... }: {
   imports = [
     ./programs/tmux.nix
-    ./lang/clojure.nix
   ];
 
   home = {
@@ -11,6 +10,10 @@
 
 
   home.sessionPath = ["$HOME/lib/bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin"];
+
+  home.packages = with pkgs; [
+    babashka # fast clojure
+  ];
 
   programs.keychain = {
     agents = [ "ssh" ];
@@ -24,7 +27,7 @@
     userName = "Lorenzo Giuliani";
     userEmail = "lorenzo@frenzart.com";
     signing = {
-      key ="key::ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO4vpKL4UUOAm9g92tn+Ez6c+zPum4dxm7ocVlyGDskC0/lKa/i+fG/hzzWH3TLvolhyCvzByswGj/eXDnEURaY5yfjd65i7EQGz7GSZb8XCS1/nG7/zdxantsw4a8YdnSDKzCgNWfveXYwmxT9mJi+3jcUbvkL6qTZy9r+Pm+ovmzEwOQex8tx+OCJyfaoD3VjrzWqIW6o16vua5akgs2BnFOMhLkLutf4MoB20ZuXV6RN8A7XoCcQiqxMV68p7z2ACKuXQyuh/UkJARSRKTURLbF00YF9NVh3FNSXOj9m5Nhh8d4P1dGvI1xXZjYF7+YYt4y/dpYS6GIpr3zzkFh lorenzo@frenzart.com";
+      key = "key::${(builtins.readFile ./lor.pub)}";
     };
   };
 
@@ -38,6 +41,12 @@
         hostname = "192.168.1.1";
         user = "lor";
       };
+    };
+  };
+
+  home.file = {
+    ".ssh/allowed-signers" = {
+      text = (builtins.readFile ./lgiuliani.pub);
     };
   };
 }
