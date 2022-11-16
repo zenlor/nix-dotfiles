@@ -53,7 +53,7 @@
       # case insensitive matching for lower-case letters
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-      e()     { pgrep emacs && emacsclient -n "$@" || emacs -nw "$@" }
+      e()     { pgrep '[Ee]macs' && emacsclient -n "$@" || emacs -nw "$@" }
       ediff() { emacs -nw --eval "(ediff-files \"$1\" \"$2\")"; }
       eman()  { emacs -nw --eval "(switch-to-buffer (man \"$1\"))"; }
       ekill() { emacsclient --eval '(kill-emacs)'; }
@@ -126,6 +126,16 @@
           sha256 = "sha256-PXHxPxFeoYXYMOC29YQKDdMnqTO0toyA7eJTSCV6PGE=";
         };
         file = "autopair.zsh";
+      }
+      {
+        name = "jq";
+        src = fetchFromGitHub {
+          owner = "reegnz";
+          repo = "jq-zsh-plugin";
+          rev = "5a240914554510c01117bfeb1cc2fcb2cfcc3125";
+          sha256 = "sha256-PXHxPxFeoYXYMOC29YQKDdMnqTO0toyA7eJTSCV6PGE=";
+        };
+        file = "jq.plugin.zsh";
       }
     ];
   };
