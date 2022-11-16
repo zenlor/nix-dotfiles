@@ -30,7 +30,7 @@
 
       commit.gpgsign = true;
       gpg.format = "ssh";
-      gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
+      gpg.ssh.allowedSignersFile = "~/.ssh/allowed-signers";
     };
   };
 
