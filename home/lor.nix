@@ -46,7 +46,7 @@
 
   home.file = {
     ".ssh/allowed-signers" = {
-      text = (builtins.readFile ./lgiuliani.pub);
+      text = "lorenzo@frenzart.com ${(builtins.readFile ./lgiuliani.pub)}";
     };
   };
 }

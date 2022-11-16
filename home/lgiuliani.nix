@@ -59,7 +59,7 @@
 
   home.file = {
     ".ssh/allowed-signers" = {
-      text = (builtins.readFile ./lgiuliani.pub);
+      text = "lgiuliani@malwarebytes.com ${(builtins.readFile ./lgiuliani.pub)}";
     };
   };
 }
