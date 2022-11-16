@@ -21,6 +21,7 @@
       "emacs-plus@29"
       "openjdk@19"
       "saml2aws"
+      "clojure"
     ];
 
     casks = [
@@ -29,6 +30,8 @@
       "alacritty"
       "font-iosevka"
       "zoom"
+      "temurin"
+      "brave-browser"
     ];
 
     taps = [

@@ -25,11 +25,13 @@
     jq       # grep json
     ijq      # interactive jq
     fx       # jq for mices
+    xh       # curl for humans
     bottom   # modern top/htop
     entr     # run commands when file changed :: fd | entr make
     navi     # cli cheatsheet
     tealdeer # tldr
     lua      # lua for lpegging math
+    rustup   # rusting
   ];
 
   # more programs
