@@ -7,5 +7,13 @@
     controlMaster = "yes";
     controlPersist = "10m";
     forwardAgent = true;
+
+    matchBlocks = {
+      "frenz.click" = {
+        user = "arch";
+        host = "frenz.click";
+        compression = true;
+      };
+    };
   };
 }

@@ -25,12 +25,14 @@
   ];
 
   home.packages = with pkgs; [
-    awscli2  # the worst official aws cli
-    tfswitch # manage multiple versions of terraform
-    k9s      # nicer kubectl
-    ktunnel  # tunnel k8s services to/from your 127.0.0.1
-    terranix # write derivations not hcl
-    babashka # fast clojure
+    awscli2        # the worst official aws cli
+    tfswitch       # manage multiple versions of terraform
+    k9s            # nicer kubectl
+    ktunnel        # tunnel k8s services to/from your 127.0.0.1
+    terranix       # write derivations not hcl
+    terraform-ls   # lsp for terraformation
+    babashka       # fast clojure
+    terraform-docs # documentation for terraform things
   ];
 
   programs.git = {
