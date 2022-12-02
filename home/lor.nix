@@ -8,8 +8,17 @@
     homeDirectory = "/home/lor";
   };
 
+  home.sessionPath = [
+    "$HOME/lib/bin"
+    "$HOME/.local/bin"
+    "$HOME/.emacs.d/bin"
+    "$HOME/.luarocks/bin"
+  ];
 
-  home.sessionPath = ["$HOME/lib/bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin"];
+  home.packages = with pkgs; [
+    luarocks
+    shellcheck
+  ];
 
   home.packages = with pkgs; [
     babashka # fast clojure

@@ -24,6 +24,9 @@
           tree-sitter-nix
           tree-sitter-python
           tree-sitter-clojure
+          tree-sitter-zig
+          tree-sitter-rust
+          tree-sitter-go
         ]
       ))
 
@@ -37,6 +40,9 @@
       vim-fugitive
       vim-sleuth
       vim-eunuch
+
+      fzf-vim
+      fzfWrapper
 
       terminus
 
