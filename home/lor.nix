@@ -18,9 +18,6 @@
   home.packages = with pkgs; [
     luarocks
     shellcheck
-  ];
-
-  home.packages = with pkgs; [
     babashka # fast clojure
   ];
 
@@ -45,6 +42,7 @@
       mac = {
         hostname = "192.168.1.184";
         user = "lgiuliani";
+        port = 2222;
       };
       nas = {
         hostname = "192.168.1.1";
