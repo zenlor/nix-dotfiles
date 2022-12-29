@@ -33,6 +33,7 @@
     terraform-ls   # lsp for terraformation
     babashka       # fast clojure
     terraform-docs # documentation for terraform things
+    pre-commit     # overengineered frameworks for simple things :facepalm:
   ];
 
   programs.git = {

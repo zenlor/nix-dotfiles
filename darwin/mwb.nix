@@ -22,6 +22,8 @@
       "openjdk@19"
       "saml2aws"
       "clojure"
+      "tfenv"
+      "kind"
     ];
 
     casks = [

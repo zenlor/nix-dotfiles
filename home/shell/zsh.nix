@@ -133,7 +133,7 @@
           owner = "reegnz";
           repo = "jq-zsh-plugin";
           rev = "5a240914554510c01117bfeb1cc2fcb2cfcc3125";
-          sha256 = "sha256-PXHxPxFeoYXYMOC29YQKDdMnqTO0toyA7eJTSCV6PGE=";
+          sha256 = "sha256-PAPby4bhbYSqeU7JX6S2lFXdkEvtpuu+INdULmoBSr4=";
         };
         file = "jq.plugin.zsh";
       }

@@ -51,24 +51,13 @@
             ./darwin/mwb.nix
           ];
         };
-        "lg-mwb" = darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
+        "mwb" = darwin.lib.darwinSystem {
+          system = "aarch64-darwin";#defaultPackage.aarch64-darwin; # "aarch64-darwin";
           modules = [ ./darwin/mwb.nix ];
         };
       };
 
       homeConfigurations = {
-        "lgiuliani@MWB-C02XL3VCJGH5" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-darwin;
-
-          extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
-
-          modules = [
-            ./home/default.nix
-            ./home/lgiuliani.nix
-          ];
-        };
-
         "lgiuliani" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
