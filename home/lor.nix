@@ -39,14 +39,15 @@
 
   programs.ssh = {
     matchBlocks = {
-      mac = {
-        hostname = "192.168.1.184";
-        user = "lgiuliani";
-        port = 2222;
-      };
       nas = {
         hostname = "192.168.1.1";
         user = "lor";
+      };
+      mac = {
+        hostname = "localhost";
+        user = "lgiuliani";
+        port = 2222;
+        proxyJump = "nas";
       };
     };
   };

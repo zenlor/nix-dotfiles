@@ -58,6 +58,19 @@
   };
 
   programs.ssh = {
+    matchBlocks = {
+      nas = {
+        hostname = "192.168.1.1";
+        user = "lor";
+        remoteForwards = [
+          {
+            bind.port = 2222;
+            host.address = "localhost";
+            host.port = 2222;
+          }
+        ];
+      };
+    };
   };
 
   home.file = {
