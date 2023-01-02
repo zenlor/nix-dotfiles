@@ -51,6 +51,7 @@
     keys = [ "id_rsa"
              "id_frenzart.com"
              "id_ecdsa"
+             "id_mwb"
            ];
   };
 
