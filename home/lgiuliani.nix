@@ -49,30 +49,16 @@
   programs.keychain = {
     agents = [ "ssh" ];
     keys = [ "id_rsa"
-             "id_frenzart.com"
              "id_ecdsa"
+             "id_ed25519"
+             "id_frenzart.com"
              "id_mwb"
+             "id_mac"
            ];
   };
 
   programs.go = {
     goPrivate = [ "github.com/Malwarebytes" ];
-  };
-
-  programs.ssh = {
-    matchBlocks = {
-      nas = {
-        hostname = "192.168.1.1";
-        user = "lor";
-        remoteForwards = [
-          {
-            bind.port = 2222;
-            host.address = "localhost";
-            host.port = 2222;
-          }
-        ];
-      };
-    };
   };
 
   home.file = {

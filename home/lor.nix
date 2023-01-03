@@ -24,8 +24,9 @@
   programs.keychain = {
     agents = [ "ssh" ];
     keys = [ "id_rsa"
-             "id_frenzart.com"
              "id_ecdsa"
+             "id_ed25519"
+             "id_frenzart.com"
            ];
   };
 
@@ -34,21 +35,6 @@
     userEmail = "lorenzo@frenzart.com";
     signing = {
       key = "key::${(builtins.readFile ./lor.pub)}";
-    };
-  };
-
-  programs.ssh = {
-    matchBlocks = {
-      nas = {
-        hostname = "192.168.1.1";
-        user = "lor";
-      };
-      mac = {
-        hostname = "localhost";
-        user = "lgiuliani";
-        port = 2222;
-        proxyJump = "nas";
-      };
     };
   };
 

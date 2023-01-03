@@ -7,7 +7,6 @@
   imports = [
     ./shell/zsh.nix
     ./programs/git.nix
-    ./programs/ssh.nix
     ./programs/fzf.nix
     ./programs/direnv.nix
     ./programs/tmux.nix
