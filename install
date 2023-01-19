@@ -11,6 +11,15 @@ exit "$1"
 }
 
 case "$1" in
+    upgrade)
+        nix flake lock \
+            --update-input nixpkgs \
+            --update-input home-manager \
+            --update-input darwin \
+            --update-input homeage \
+            --update-input emacs-overlay
+        ;;
+
     build)
         nix run . build -- --flake . --show-trace
         ;;

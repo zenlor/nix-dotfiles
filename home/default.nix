@@ -31,6 +31,7 @@
     tealdeer # tldr
     lua      # lua for lpegging math
     rustup   # rusting
+    hub      # for git on the hub
   ];
 
   # more programs
