@@ -15,23 +15,25 @@
   ];
 
   home.packages = with pkgs; [
-    ripgrep  # filtered faster grep
-    fd       # modern find
-    bat      # modern cat
-    exa      # modern ls
-    age      # encrypt all the things
-    gitui    # git terminal user interface
-    jq       # grep json
-    ijq      # interactive jq
-    fx       # jq for mices
-    xh       # curl for humans
-    bottom   # modern top/htop
-    entr     # run commands when file changed :: fd | entr make
-    navi     # cli cheatsheet
-    tealdeer # tldr
-    lua      # lua for lpegging math
-    rustup   # rusting
-    hub      # for git on the hub
+    age         # encrypt all the things
+    bat         # modern cat
+    bottom      # modern top/htop
+    clojure-lsp #  (for [lsp :in clojure])
+    entr        # run commands when file changed :: fd | entr make
+    exa         # modern ls
+    fd          # modern find
+    fx          # jq for mices
+    gitui       # git terminal user interface
+    hub         # for git on the hub
+    hugo        # to make websites
+    ijq         # interactive jq
+    jq          # grep json
+    lua         # lua for lpegging math
+    navi        # cli cheatsheet
+    ripgrep     # filtered faster grep
+    rustup      # rusting
+    tealdeer    # tldr
+    xh          # curl for humans
   ];
 
   # more programs
