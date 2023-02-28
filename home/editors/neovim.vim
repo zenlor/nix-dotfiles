@@ -22,6 +22,8 @@ set laststatus=2
 	" map local leader key to <comma>
 	let maplocalleader = ','
 
+	nmap <leader>bs :w<cr>
+
 	" Window movement
 	map <C-h> <C-w>h
 	map <C-j> <C-w>j

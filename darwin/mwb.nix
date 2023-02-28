@@ -24,6 +24,7 @@
       "clojure"
       "tfenv"
       "kind"
+      "medis"
     ];
 
     casks = [

@@ -11,6 +11,11 @@ exit "$1"
 }
 
 case "$1" in
+    devenv)
+        nix profile install nixpkgs#cachix
+        cachix use devenv
+        nix profile install --accept-flake-config github:cachix/devenv/latest
+        ;;
     upgrade)
         nix flake lock \
             --update-input nixpkgs \

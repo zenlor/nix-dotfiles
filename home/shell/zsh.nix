@@ -29,6 +29,7 @@
       rd  = "rmdir";
       sc  = "systemctl";
       "_" = "sudo ";
+      vim = "nvim";
     };
 
     shellGlobalAliases = {

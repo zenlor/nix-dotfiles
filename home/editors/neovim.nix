@@ -27,6 +27,7 @@
           tree-sitter-zig
           tree-sitter-rust
           tree-sitter-go
+          tree-sitter-hcl
         ]
       ))
 

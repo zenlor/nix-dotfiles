@@ -25,6 +25,8 @@
       core.autocrlf = "input";
       init.defaultBranch = "main";
       pull.rebase = true;
+      push.default = "upstream";
+      push.autoSetupRemote = true;
       rebase.autosquash = true;
       rerere.enabled = true;
 

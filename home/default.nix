@@ -15,25 +15,27 @@
   ];
 
   home.packages = with pkgs; [
-    age         # encrypt all the things
-    bat         # modern cat
-    bottom      # modern top/htop
-    clojure-lsp #  (for [lsp :in clojure])
-    entr        # run commands when file changed :: fd | entr make
-    exa         # modern ls
-    fd          # modern find
-    fx          # jq for mices
-    gitui       # git terminal user interface
-    hub         # for git on the hub
-    hugo        # to make websites
-    ijq         # interactive jq
-    jq          # grep json
-    lua         # lua for lpegging math
-    navi        # cli cheatsheet
-    ripgrep     # filtered faster grep
-    rustup      # rusting
-    tealdeer    # tldr
-    xh          # curl for humans
+    age                 # encrypt all the things
+    bat                 # modern cat
+    bottom              # modern top/htop
+    clojure-lsp         #  (for [lsp :in clojure])
+    # devenv              # developer environment, nix for people with a deadline
+    editorconfig-core-c # editorconfig to config editors for non-standard people
+    entr                # run commands when file changed :: fd | entr make
+    exa                 # modern ls
+    fd                  # modern find
+    fx                  # jq for mices
+    gitui               # git terminal user interface
+    hub                 # for git on the hub
+    hugo                # to make websites
+    ijq                 # interactive jq
+    jq                  # grep json
+    lua                 # lua for lpegging math
+    navi                # cli cheatsheet
+    ripgrep             # filtered faster grep
+    rustup              # rusting
+    tealdeer            # tldr
+    xh                  # curl for humans
   ];
 
   # more programs

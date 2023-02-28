@@ -51,6 +51,10 @@
             ./darwin/mwb.nix
           ];
         };
+        "MWB-RH4YYY222F" = darwin.lib.darwinSystem {
+          system = "aarch64-darwin";#defaultPackage.aarch64-darwin; # "aarch64-darwin";
+          modules = [ ./darwin/mwb.nix ];
+        };
         "mwb" = darwin.lib.darwinSystem {
           system = "aarch64-darwin";#defaultPackage.aarch64-darwin; # "aarch64-darwin";
           modules = [ ./darwin/mwb.nix ];
