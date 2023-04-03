@@ -35,6 +35,7 @@
       "zoom"
       "temurin"
       "brave-browser"
+      "keybase"
     ];
 
     taps = [

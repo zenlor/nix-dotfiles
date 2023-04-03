@@ -14,6 +14,8 @@
       ".dir-locals.el"
       ".envrc"
       ".DS_Store"
+      ".lsp"
+      ".clj-kondo"
     ];
 
     aliases = {
