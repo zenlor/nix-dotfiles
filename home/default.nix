@@ -36,6 +36,9 @@
     rustup              # rusting
     tealdeer            # tldr
     xh                  # curl for humans
+    shellcheck          # check these clams
+    nixfmt              # nix needs formatting?
+    zig                 # c for humans
   ];
 
   # more programs

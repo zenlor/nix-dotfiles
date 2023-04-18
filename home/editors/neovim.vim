@@ -33,6 +33,8 @@ set laststatus=2
 	nmap <leader>b :BufferLineCycleNext<cr>
 	nmap <leader>B :BufferLineCyclePrev<cr>
 
+	nmap <leader>bs :w<cr>
+
 	nnoremap <silent> <leader><space> :Files<CR>
 	nnoremap <silent> <leader>a :Buffers<CR>
 	nnoremap <silent> <leader>A :Windows<CR>
