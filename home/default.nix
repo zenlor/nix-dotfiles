@@ -19,8 +19,7 @@
     bat                 # modern cat
     bottom              # modern top/htop
     clojure-lsp         #  (for [lsp :in clojure])
-    # devenv              # developer environment, nix for people with a deadline
-    editorconfig-core-c # editorconfig to config editors for non-standard people
+    devenv              # developer environment, nix for people with a deadline
     entr                # run commands when file changed :: fd | entr make
     exa                 # modern ls
     fd                  # modern find
@@ -39,6 +38,7 @@
     shellcheck          # check these clams
     nixfmt              # nix needs formatting?
     zig                 # c for humans
+    editorconfig-core-c # i like my editors to be consistent
   ];
 
   # more programs
