@@ -25,6 +25,7 @@
       "tfenv"
       "kind"
       "medis"
+      "podman"
     ];
 
     casks = [
