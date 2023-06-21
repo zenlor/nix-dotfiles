@@ -3,9 +3,10 @@
 print_usage() {
     cat <<-EOF
 Options:
-    build  :: builds the flake in ./results
-    switch :: install the flake in ~/.config
-    darwin :: switch using nix-darwin
+    build   :: builds the flake in ./results
+    switch  :: install the flake in ~/.config
+    darwin  :: switch using nix-darwin
+    upgrade :: refresh flake.lock
 EOF
 exit "$1"
 }
