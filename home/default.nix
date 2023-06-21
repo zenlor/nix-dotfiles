@@ -19,7 +19,7 @@
     bat                 # modern cat
     bottom              # modern top/htop
     clojure-lsp         #  (for [lsp :in clojure])
-    devenv              # developer environment, nix for people with a deadline
+    # devenv              # developer environment, nix for people with a deadline
     entr                # run commands when file changed :: fd | entr make
     exa                 # modern ls
     fd                  # modern find

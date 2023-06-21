@@ -39,7 +39,15 @@
     };
 
     profileExtra = ''
-      [ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ] && source $HOME/.nix-profile/etc/profile.d/nix.sh	
+      [ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ] && source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+      if [ $TERM = tramp ]; then
+              unset RPROMPT
+              unset RPS1
+              PS1="$ "
+              unsetopt zle
+              unsetopt rcs  # Inhibit loading of further config files
+      fi
     '';
 
     initExtra = ''
