@@ -47,6 +47,9 @@
 
       terminus
 
+      # neocomplete
+      deoplete-nvim
+
       bufferline-nvim
     ];
 

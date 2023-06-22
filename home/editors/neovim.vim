@@ -13,6 +13,8 @@ set textwidth=81
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 set laststatus=2
 
+" enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
 
 "" Bindings {{{
 
