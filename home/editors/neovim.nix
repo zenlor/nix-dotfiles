@@ -6,6 +6,7 @@
   programs.neovim = {
     enable = true;
 
+    defaultEditor = true;
     vimAlias = true;
     vimdiffAlias = true;
 
@@ -31,16 +32,16 @@
         ]
       ))
 
-      vim-sensible
-      vim-lastplace
-      vim-vinegar
-      vim-repeat
-      vim-commentary
-      vim-sneak
-      vim-surround
-      vim-fugitive
-      vim-sleuth
-      vim-eunuch
+      # vim-sensible
+      # vim-lastplace
+      # vim-vinegar
+      # vim-repeat
+      # vim-commentary
+      # vim-sneak
+      # vim-surround
+      # vim-fugitive
+      # vim-sleuth
+      # vim-eunuch
 
       fzf-vim
       fzfWrapper
@@ -50,9 +51,13 @@
       # neocomplete
       deoplete-nvim
 
+      # ui
       bufferline-nvim
+      lualine-nvim
+      mini-nvim
     ];
 
-    extraConfig = builtins.readFile ./neovim.vim;
+    # extraConfig = builtins.readFile ./neovim.vim;
+    extraLuaConfig = builtins.readFile ./neovim.lua;
   };
 }

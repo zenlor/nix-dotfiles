@@ -48,7 +48,6 @@
   programs.direnv.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "vim";
   };
 
   home.stateVersion = "22.05";
