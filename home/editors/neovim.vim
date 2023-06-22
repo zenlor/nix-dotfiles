@@ -10,7 +10,18 @@ set list
 set listchars=nbsp:☠,tab:│\ ,trail:-,extends:>,precedes:<,nbsp:+
 set textwidth=81
 
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
+set statusline=
+set statusline+=\ %y
+set statusline+=\ %r
+set statusline+=%#CursorLineNr#
+set statusline+=\ %F
+set statusline+=\ %M
+set statusline+=%= "Right side settings
+set statusline+=%#Search#
+set statusline+=%{FugitiveStatusline()}
+set statusline+=\ %c:%l/%L
+set statusline+=\ [%p%%]
+
 set laststatus=2
 
 " enable deoplete at startup
@@ -131,4 +142,8 @@ nnoremap <c-p> :FZF<cr>
     " Mimic shortcuts in the terminal
     cnoremap <C-a> <Home>
     cnoremap <C-e> <End>
+" }}}
+
+" gui {{{
+  hi Comment gui=italic cterm=italic
 " }}}
