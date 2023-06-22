@@ -7,10 +7,13 @@
     keyMode = "vi";
     prefix = "C-a";
     secureSocket = true;
-    terminal = "screen-256color";
+    terminal = "tmux-256color";
     customPaneNavigationAndResize = true;
 
     extraConfig = ''
+      # reload tmux.conf
+      bind-key R source-file ~/.config/tmux/tmux.conf; display-message "tmux is reloaded"
+
       bind-key a last-window
 
       # start pane number from 1
@@ -42,7 +45,7 @@
       set -g status-fg colour4
       set -g status-bg colour0
 
-      set -g status-left '#[fg=colour10,bg=colour0,bold] ❐ #S #[fg=colour8,bg=colour10] #(whoami) #[fg=colour8,bg=colour10]░#[fg=colour10,bg=colour0]░'
+      set -g status-left '#[fg=colour10,bg=colour0,bold] ❐ #S #[fg=colour8,bg=colour10,italics] #(whoami) #[fg=colour8,bg=colour10]░#[fg=colour10,bg=colour0]░'
       set -g window-status-format "#[bg=colour0]  #I #W "
       set -g window-status-current-format "#[fg=colour8,bg=colour16,bold]░ #I #W "
       set -g status-right "#[nobold]░▒ #(hostname -s) · #(date +'%m%d|%H%M')"
