@@ -16,6 +16,8 @@
     ];
 
     plugins = with pkgs.vimPlugins; [
+      nvim-lspconfig
+
       vim-nix
       vim-go
       vim-terraform
@@ -34,13 +36,13 @@
 
       # vim-sensible
       # vim-lastplace
-      # vim-vinegar
+      vim-vinegar
       # vim-repeat
       # vim-commentary
       # vim-sneak
       # vim-surround
-      # vim-fugitive
-      # vim-sleuth
+      vim-fugitive
+      vim-sleuth
       # vim-eunuch
 
       fzf-vim
