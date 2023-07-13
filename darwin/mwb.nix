@@ -18,14 +18,14 @@
     brewPrefix = "/opt/homebrew/bin";
 
     brews = [
-      "emacs-plus@29"
+      "emacs-plus@30"
       "openjdk@19"
       "saml2aws"
       "clojure"
       "tfenv"
       "kind"
-      "medis"
       "podman"
+      "ncurses"
     ];
 
     casks = [

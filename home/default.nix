@@ -25,6 +25,8 @@
     fd                  # modern find
     fx                  # jq for mices
     gitui               # git terminal user interface
+    go
+    gopls
     hub                 # for git on the hub
     hugo                # to make websites
     ijq                 # interactive jq
